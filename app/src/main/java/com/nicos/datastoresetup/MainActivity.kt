@@ -1,6 +1,7 @@
 package com.nicos.datastoresetup
 
 import android.os.Bundle
+import android.widget.Toast
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.layout.Box
@@ -12,11 +13,18 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import androidx.datastore.preferences.core.stringPreferencesKey
+import com.nicos.datastoresetup.preferencesDataStore.PreferencesDataStoreHelper
 import com.nicos.datastoresetup.ui.theme.DataStoreSetupTheme
+import kotlinx.coroutines.launch
+
+private const val PREFERENCE_STRING_KEY = "preference_string_key"
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -37,22 +45,61 @@ class MainActivity : ComponentActivity() {
 
 @Composable
 fun MainView() {
+    val scope = rememberCoroutineScope()
+    val context = LocalContext.current
+
     Box(contentAlignment = Alignment.Center) {
         Column {
             Button(
-                onClick = {},
+                onClick = {
+                    scope.launch {
+                        PreferencesDataStoreHelper.saveStringValue(
+                            "testValue",
+                            stringPreferencesKey(PREFERENCE_STRING_KEY),
+                            context
+                        )
+                    }
+                },
                 modifier = Modifier.width(170.dp)
             ) {
                 Text("Save String Value")
             }
             Button(
-                onClick = {},
+                onClick = {
+                    scope.launch {
+                        PreferencesDataStoreHelper.getStringValueFlow(
+                            stringPreferencesKey(PREFERENCE_STRING_KEY),
+                            context
+                        ).collect {
+                            Toast.makeText(context, it, Toast.LENGTH_SHORT).show()
+                        }
+                    }
+                },
+                modifier = Modifier.width(170.dp)
+            ) {
+                Text("Print String Value")
+            }
+            Button(
+                onClick = {
+                    scope.launch {
+                        PreferencesDataStoreHelper.removeStringValueWithSpecificKey(
+                            stringPreferencesKey(PREFERENCE_STRING_KEY),
+                            context
+                        )
+                    }
+                },
                 modifier = Modifier.width(170.dp)
             ) {
                 Text("Save Specific Value")
             }
             Button(
-                onClick = {},
+                onClick = {
+                    scope.launch {
+                        PreferencesDataStoreHelper.removeAllValues(
+                            context
+                        )
+                    }
+                },
                 modifier = Modifier.width(170.dp)
             ) {
                 Text("Save All Values")
