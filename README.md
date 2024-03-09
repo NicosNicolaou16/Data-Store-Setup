@@ -71,28 +71,9 @@ internal suspend fun removeStringValueWithSpecificKey(
 ```
 
 ## Step 5:
-Initialize the methods for save, print, delete specific value and all values
+Initialize the methods for save, print, delete specific value and all values in screen
 
 ```Kotlin
-        scope.launch {
-              PreferencesDataStoreHelper.saveStringValue(
-                  "testValue",
-                  stringPreferencesKey(PREFERENCE_STRING_KEY),
-                  context
-              )
-        }
-
-
-scope.launch {
-    PreferencesDataStoreHelper.getStringValueFlow(
-        stringPreferencesKey(PREFERENCE_STRING_KEY),
-        context
-    ).collect {
-        Toast.makeText(context, it, Toast.LENGTH_SHORT).show()
-    }
-}
-
-
 scope.launch {
     PreferencesDataStoreHelper.removeStringValueWithSpecificKey(
         stringPreferencesKey(PREFERENCE_STRING_KEY),
