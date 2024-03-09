@@ -1,8 +1,11 @@
 # Data Store Setup
+
 This project shows the setup for Preference Data Store.
 
 ## Step 1:
+
 Add the dependencies library
+
 ```Kotlin
 val preferencesDataStoreVersion by extra("1.0.0")
 
@@ -14,6 +17,7 @@ dependencies {
 ```
 
 ## Step 2:
+
 Create a Helper class that initialize the Data Store
 
 ```Kotlin
@@ -23,3 +27,99 @@ private val Context.dataStore: DataStore<Preferences> by preferencesDataStore(na
 ```
 
 ## Step 3:
+
+Create the two methods for save and print and for our example we are using only for String value
+
+```Kotlin
+internal suspend fun saveStringValue(
+    value: String,
+    key: Preferences.Key<String>,
+    context: Context
+) {
+    context.dataStore.edit { saveData ->
+        saveData[key] = value
+    }
+}
+
+internal fun getStringValueFlow(key: Preferences.Key<String>, context: Context): Flow<String?> =
+    context.dataStore.data
+        .catch { exception ->
+            when (exception) {
+                is IOException -> emit(emptyPreferences())
+                else -> throw exception
+            }
+        }.map { readData ->
+            readData[key]
+        }
+```
+
+## Step 4:
+
+Bonus Part - delete specific value and delete all Data Store values
+
+```Koltin
+internal suspend fun removeStringValueWithSpecificKey(
+        key: Preferences.Key<String>,
+        context: Context
+    ) {
+        context.dataStore.edit { it.remove(key) }
+    }
+
+    internal suspend fun removeAllValues(context: Context) {
+        context.dataStore.edit { it.clear() }
+    }
+```
+
+## Step 5:
+Initialize the methods for save, print, delete specific value and all values
+
+```Kotlin
+        scope.launch {
+              PreferencesDataStoreHelper.saveStringValue(
+                  "testValue",
+                  stringPreferencesKey(PREFERENCE_STRING_KEY),
+                  context
+              )
+        }
+
+
+scope.launch {
+    PreferencesDataStoreHelper.getStringValueFlow(
+        stringPreferencesKey(PREFERENCE_STRING_KEY),
+        context
+    ).collect {
+        Toast.makeText(context, it, Toast.LENGTH_SHORT).show()
+    }
+}
+
+
+scope.launch {
+    PreferencesDataStoreHelper.removeStringValueWithSpecificKey(
+        stringPreferencesKey(PREFERENCE_STRING_KEY),
+        context
+    )
+
+    scope.launch {
+        PreferencesDataStoreHelper.removeAllValues(
+            context
+        )
+    }
+    scope.launch {
+        PreferencesDataStoreHelper.removeStringValueWithSpecificKey(
+            stringPreferencesKey(PREFERENCE_STRING_KEY),
+            context
+        )
+    }
+    scope.launch {
+        PreferencesDataStoreHelper.removeAllValues(
+            context
+        )
+    }
+}
+```
+
+
+## Check my article
+ <br />
+
+# References <br />
