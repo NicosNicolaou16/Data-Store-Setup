@@ -36,7 +36,7 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    MainView()
+                    DataStoreMainView()
                 }
             }
         }
@@ -44,7 +44,7 @@ class MainActivity : ComponentActivity() {
 }
 
 @Composable
-fun MainView() {
+fun DataStoreMainView() {
     val scope = rememberCoroutineScope()
     val context = LocalContext.current
 
@@ -111,5 +111,5 @@ fun MainView() {
 @Composable
 @Preview
 fun MainViewPreview() {
-    MainView()
+    DataStoreMainView()
 }
