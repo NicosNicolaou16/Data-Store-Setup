@@ -17,6 +17,7 @@ import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.datastore.preferences.core.stringPreferencesKey
@@ -62,7 +63,7 @@ fun DataStoreMainView() {
                 },
                 modifier = Modifier.width(170.dp)
             ) {
-                Text("Save String Value")
+                Text(stringResource(R.string.save_string_value))
             }
             Button(
                 onClick = {
@@ -77,7 +78,7 @@ fun DataStoreMainView() {
                 },
                 modifier = Modifier.width(170.dp)
             ) {
-                Text("Print String Value")
+                Text(stringResource(R.string.print_string_value))
             }
             Button(
                 onClick = {
@@ -90,7 +91,7 @@ fun DataStoreMainView() {
                 },
                 modifier = Modifier.width(170.dp)
             ) {
-                Text("Save Specific Value")
+                Text(stringResource(R.string.remove_specific_value))
             }
             Button(
                 onClick = {
@@ -102,7 +103,7 @@ fun DataStoreMainView() {
                 },
                 modifier = Modifier.width(170.dp)
             ) {
-                Text("Save All Values")
+                Text("Remove All Values")
             }
         }
     }

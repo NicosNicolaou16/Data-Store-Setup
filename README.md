@@ -100,33 +100,69 @@ Call the methods for save, print, delete specific value and all values in the sc
 class MainActivity : ComponentActivity() {
 
     //Other Code Here...
-    
+
     @Composable
     fun DataStoreMainView() {
         val scope = rememberCoroutineScope()
         val context = LocalContext.current
 
-        scope.launch {
-            PreferencesDataStoreHelper.removeStringValueWithSpecificKey(
-                stringPreferencesKey(PREFERENCE_STRING_KEY),
-                context
-            )
-        }
-        scope.launch {
-            PreferencesDataStoreHelper.removeAllValues(
-                context
-            )
-        }
-        scope.launch {
-            PreferencesDataStoreHelper.removeStringValueWithSpecificKey(
-                stringPreferencesKey(PREFERENCE_STRING_KEY),
-                context
-            )
-        }
-        scope.launch {
-            PreferencesDataStoreHelper.removeAllValues(
-                context
-            )
+        Box(contentAlignment = Alignment.Center) {
+            Column {
+                Button(
+                    onClick = {
+                        scope.launch {
+                            PreferencesDataStoreHelper.saveStringValue(
+                                "testValue",
+                                stringPreferencesKey(PREFERENCE_STRING_KEY),
+                                context
+                            )
+                        }
+                    },
+                    modifier = Modifier.width(170.dp)
+                ) {
+                    Text(stringResource(R.string.save_string_value))
+                }
+                Button(
+                    onClick = {
+                        scope.launch {
+                            PreferencesDataStoreHelper.getStringValueFlow(
+                                stringPreferencesKey(PREFERENCE_STRING_KEY),
+                                context
+                            ).collect {
+                                Toast.makeText(context, it, Toast.LENGTH_SHORT).show()
+                            }
+                        }
+                    },
+                    modifier = Modifier.width(170.dp)
+                ) {
+                    Text(stringResource(R.string.print_string_value))
+                }
+                Button(
+                    onClick = {
+                        scope.launch {
+                            PreferencesDataStoreHelper.removeStringValueWithSpecificKey(
+                                stringPreferencesKey(PREFERENCE_STRING_KEY),
+                                context
+                            )
+                        }
+                    },
+                    modifier = Modifier.width(170.dp)
+                ) {
+                    Text(stringResource(R.string.remove_specific_value))
+                }
+                Button(
+                    onClick = {
+                        scope.launch {
+                            PreferencesDataStoreHelper.removeAllValues(
+                                context
+                            )
+                        }
+                    },
+                    modifier = Modifier.width(170.dp)
+                ) {
+                    Text("Remove All Values")
+                }
+            }
         }
     }
 }
