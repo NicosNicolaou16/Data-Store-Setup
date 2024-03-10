@@ -97,33 +97,36 @@ object PreferencesDataStoreHelper {
 Call the methods for save, print, delete specific value and all values in the screen
 
 ```Kotlin
-//Compose Method
+class MainActivity : ComponentActivity() {
 
-val scope = rememberCoroutineScope()
-val context = LocalContext.current
+    //Other Code Here...
 
-scope.launch {
-    PreferencesDataStoreHelper.removeStringValueWithSpecificKey(
-        stringPreferencesKey(PREFERENCE_STRING_KEY),
-        context
-    )
+    val scope = rememberCoroutineScope()
+    val context = LocalContext.current
 
-    scope.launch {
-        PreferencesDataStoreHelper.removeAllValues(
-            context
-        )
-    }
-    scope.launch {
+    scope.launch
+    {
         PreferencesDataStoreHelper.removeStringValueWithSpecificKey(
             stringPreferencesKey(PREFERENCE_STRING_KEY),
             context
         )
     }
-    scope.launch {
-        PreferencesDataStoreHelper.removeAllValues(
-            context
-        )
-    }
+        scope.launch {
+            PreferencesDataStoreHelper.removeAllValues(
+                context
+            )
+        }
+        scope.launch {
+            PreferencesDataStoreHelper.removeStringValueWithSpecificKey(
+                stringPreferencesKey(PREFERENCE_STRING_KEY),
+                context
+            )
+        }
+        scope.launch {
+            PreferencesDataStoreHelper.removeAllValues(
+                context
+            )
+        }
 }
 ```
 
