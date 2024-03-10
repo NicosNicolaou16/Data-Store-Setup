@@ -160,7 +160,7 @@ class MainActivity : ComponentActivity() {
                     },
                     modifier = Modifier.width(170.dp)
                 ) {
-                    Text("Remove All Values")
+                    Text(stringResource(R.string.remove_all_values))
                 }
             }
         }
