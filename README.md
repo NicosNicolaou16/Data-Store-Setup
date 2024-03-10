@@ -111,22 +111,22 @@ class MainActivity : ComponentActivity() {
             context
         )
     }
-        scope.launch {
-            PreferencesDataStoreHelper.removeAllValues(
-                context
+    scope.launch {
+        PreferencesDataStoreHelper.removeAllValues(
+            context
+        )
+    }
+    scope.launch {
+        PreferencesDataStoreHelper.removeStringValueWithSpecificKey(
+            stringPreferencesKey(PREFERENCE_STRING_KEY),
+            context
             )
-        }
-        scope.launch {
-            PreferencesDataStoreHelper.removeStringValueWithSpecificKey(
-                stringPreferencesKey(PREFERENCE_STRING_KEY),
+    }
+    scope.launch {
+        PreferencesDataStoreHelper.removeAllValues(
                 context
-            )
-        }
-        scope.launch {
-            PreferencesDataStoreHelper.removeAllValues(
-                context
-            )
-        }
+        )
+    }
 }
 ```
 
