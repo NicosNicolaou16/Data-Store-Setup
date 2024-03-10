@@ -3,4 +3,5 @@
     <string name="save_string_value">Save String Value</string>
     <string name="print_string_value">Print String Value</string>
     <string name="remove_specific_value">Remove Specific Value</string>
+    <string name="remove_all_values">Remove All Values</string>
 </resources>
