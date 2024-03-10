@@ -1,6 +1,11 @@
 # Data Store Setup
 
-This project shows the setup for Preference Data Store.
+This project shows the setup for the Jetpack library Preference Data Store.
+
+Target SDK version: 34 <br />
+Minimum SDK version: 27 <br />
+Kotlin version: 1.9.22 <br />
+Gradle version: 8.3.0 <br />
 
 ## Step 1:
 
@@ -71,9 +76,15 @@ internal suspend fun removeStringValueWithSpecificKey(
 ```
 
 ## Step 5:
-Initialize the methods for save, print, delete specific value and all values in screen
+
+Call the methods for save, print, delete specific value and all values in the screen
 
 ```Kotlin
+//Compose Method
+
+val scope = rememberCoroutineScope()
+val context = LocalContext.current
+
 scope.launch {
     PreferencesDataStoreHelper.removeStringValueWithSpecificKey(
         stringPreferencesKey(PREFERENCE_STRING_KEY),
@@ -99,8 +110,10 @@ scope.launch {
 }
 ```
 
-
 ## Check my article
+
  <br />
 
-# References <br />
+# References
+
+<br />
