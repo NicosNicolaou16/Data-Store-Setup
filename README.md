@@ -104,8 +104,7 @@ class MainActivity : ComponentActivity() {
     val scope = rememberCoroutineScope()
     val context = LocalContext.current
 
-    scope.launch
-    {
+    scope.launch {
         PreferencesDataStoreHelper.removeStringValueWithSpecificKey(
             stringPreferencesKey(PREFERENCE_STRING_KEY),
             context
