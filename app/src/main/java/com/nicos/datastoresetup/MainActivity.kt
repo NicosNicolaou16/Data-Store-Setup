@@ -54,6 +54,9 @@ fun DataStoreMainView() {
             Button(
                 onClick = {
                     scope.launch {
+                        /**
+                         * Save the Value
+                         * */
                         PreferencesDataStoreHelper.saveStringValue(
                             "testValue",
                             stringPreferencesKey(PREFERENCE_STRING_KEY),
@@ -68,6 +71,9 @@ fun DataStoreMainView() {
             Button(
                 onClick = {
                     scope.launch {
+                        /**
+                         * Read the Value
+                         * */
                         PreferencesDataStoreHelper.getStringValueFlow(
                             stringPreferencesKey(PREFERENCE_STRING_KEY),
                             context
@@ -83,6 +89,9 @@ fun DataStoreMainView() {
             Button(
                 onClick = {
                     scope.launch {
+                        /**
+                         * Remove the Specific Value
+                         * */
                         PreferencesDataStoreHelper.removeStringValueWithSpecificKey(
                             stringPreferencesKey(PREFERENCE_STRING_KEY),
                             context
@@ -96,6 +105,9 @@ fun DataStoreMainView() {
             Button(
                 onClick = {
                     scope.launch {
+                        /**
+                         * Remove all the Values
+                         * */
                         PreferencesDataStoreHelper.removeAllValues(
                             context
                         )
