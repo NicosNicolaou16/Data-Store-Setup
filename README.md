@@ -147,7 +147,7 @@ class MainActivity : ComponentActivity() {
                     onClick = {
                         scope.launch {
                             /**
-                             * Remove the Specific Value
+                             * Remove a Specific Value
                              * */
                             PreferencesDataStoreHelper.removeStringValueWithSpecificKey(
                                 stringPreferencesKey(PREFERENCE_STRING_KEY),
