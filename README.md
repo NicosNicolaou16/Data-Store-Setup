@@ -185,5 +185,4 @@ class MainActivity : ComponentActivity() {
  <br />
 
 # References
-
-<br />
+https://developer.android.com/topic/libraries/architecture/datastore <br />
