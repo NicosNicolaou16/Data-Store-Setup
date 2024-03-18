@@ -181,8 +181,7 @@ class MainActivity : ComponentActivity() {
 ```
 
 ## Check my article
-
- <br />
+https://medium.com/@nicosnicolaou/preferences-data-store-setup-b197e3db09dd <br />
 
 # References
 https://developer.android.com/topic/libraries/architecture/datastore <br />
