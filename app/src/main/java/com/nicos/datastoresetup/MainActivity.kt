@@ -18,11 +18,13 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.datastore.preferences.core.stringPreferencesKey
 import com.nicos.datastoresetup.preferencesDataStore.PreferencesDataStoreHelper
 import com.nicos.datastoresetup.ui.theme.DataStoreSetupTheme
+import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
 private const val PREFERENCE_STRING_KEY = "preference_string_key"
@@ -78,7 +80,9 @@ fun DataStoreMainView() {
                             stringPreferencesKey(PREFERENCE_STRING_KEY),
                             context
                         ).collect {
-                            Toast.makeText(context, it, Toast.LENGTH_SHORT).show()
+                            if (it != null) {
+                                Toast.makeText(context, it, Toast.LENGTH_SHORT).show()
+                            }
                         }
                     }
                 },
@@ -100,7 +104,7 @@ fun DataStoreMainView() {
                 },
                 modifier = Modifier.width(170.dp)
             ) {
-                Text(stringResource(R.string.remove_specific_value))
+                Text(stringResource(R.string.remove_specific_value), textAlign = TextAlign.Center)
             }
             Button(
                 onClick = {

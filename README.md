@@ -135,7 +135,9 @@ class MainActivity : ComponentActivity() {
                                 stringPreferencesKey(PREFERENCE_STRING_KEY),
                                 context
                             ).collect {
-                                Toast.makeText(context, it, Toast.LENGTH_SHORT).show()
+                                if (it != null) {
+                                    Toast.makeText(context, it, Toast.LENGTH_SHORT).show()
+                                }
                             }
                         }
                     },
