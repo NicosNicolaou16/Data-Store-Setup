@@ -4,8 +4,8 @@ This project shows the setup for the Jetpack library Preference Data Store.
 
 Target SDK version: 34 <br />
 Minimum SDK version: 27 <br />
-Kotlin version: 1.9.22 <br />
-Gradle version: 8.3.0 <br />
+Kotlin version: 1.9.23 <br />
+Gradle version: 8.3.1 <br />
 
 ## Step 1:
 
