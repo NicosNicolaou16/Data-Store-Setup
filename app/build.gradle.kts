@@ -1,6 +1,7 @@
 plugins {
     alias(libs.plugins.androidApplication)
     alias(libs.plugins.jetbrainsKotlinAndroid)
+    alias(libs.plugins.compose.compiler)
 }
 
 android {
@@ -39,8 +40,9 @@ android {
     buildFeatures {
         compose = true
     }
-    composeOptions {
-        kotlinCompilerExtensionVersion = "1.5.11"
+    composeCompiler {
+        enableStrongSkippingMode = true
+        reportsDestination = layout.buildDirectory.dir("compose_compiler")
     }
     packaging {
         resources {
