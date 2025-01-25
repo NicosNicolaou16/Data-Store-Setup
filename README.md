@@ -1,6 +1,6 @@
 # Data Store Setup
 
-This project shows the setup for the Jetpack library Preference Data Store.
+This project demonstrates the setup of the Jetpack Library's Preference Data Store.
 
 Target SDK version: 34 <br />
 Minimum SDK version: 27 <br />
