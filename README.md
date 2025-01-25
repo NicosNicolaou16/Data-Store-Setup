@@ -27,7 +27,7 @@ Create a Helper class that initialize the Data Store
 
 ```Kotlin
 object PreferencesDataStoreHelper {
-    
+
     private const val PREFERENCES_DATA_STORE_NAME = "preferences_data_store_name"
 
     private val Context.dataStore: DataStore<Preferences> by preferencesDataStore(name = PREFERENCES_DATA_STORE_NAME)
@@ -44,7 +44,7 @@ Create the two methods for save and print and for our example we are using only 
 object PreferencesDataStoreHelper {
 
     //Other Code Here...
-    
+
     internal suspend fun saveStringValue(
         value: String,
         key: Preferences.Key<String>,
@@ -65,7 +65,7 @@ object PreferencesDataStoreHelper {
             }.map { readData ->
                 readData[key]
             }
-    
+
     //Other Code Here...
 }
 ```
@@ -78,7 +78,7 @@ Bonus Part - delete specific value and delete all Data Store values
 object PreferencesDataStoreHelper {
 
     //Other Code Here...
-    
+
     internal suspend fun removeStringValueWithSpecificKey(
         key: Preferences.Key<String>,
         context: Context
@@ -183,7 +183,9 @@ class MainActivity : ComponentActivity() {
 ```
 
 ## Check my article
+
 https://medium.com/@nicosnicolaou/preferences-data-store-setup-b197e3db09dd <br />
 
 # References
+
 https://developer.android.com/topic/libraries/architecture/datastore <br />
