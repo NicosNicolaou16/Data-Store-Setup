@@ -184,10 +184,10 @@ class MainActivity : ComponentActivity() {
 
 # Versioning
 
-Target SDK version: 34 <br />
-Minimum SDK version: 27 <br />
-Kotlin version: 2.0.20 <br />
-Gradle version: 8.5.2 <br />
+Target SDK version: 35 <br />
+Minimum SDK version: 28 <br />
+Kotlin version: 2.1.0 <br />
+Gradle version: 8.8.0 <br />
 
 # References
 
