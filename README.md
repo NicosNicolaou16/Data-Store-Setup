@@ -1,11 +1,8 @@
 # Data Store Setup
 
-This project shows the setup for the Jetpack library Preference Data Store.
+This project demonstrates the setup of the Jetpack Library's Preference Data Store.
 
-Target SDK version: 34 <br />
-Minimum SDK version: 27 <br />
-Kotlin version: 2.0.20 <br />
-Gradle version: 8.5.2 <br />
+# Setup
 
 ## Step 1:
 
@@ -27,7 +24,7 @@ Create a Helper class that initialize the Data Store
 
 ```Kotlin
 object PreferencesDataStoreHelper {
-    
+
     private const val PREFERENCES_DATA_STORE_NAME = "preferences_data_store_name"
 
     private val Context.dataStore: DataStore<Preferences> by preferencesDataStore(name = PREFERENCES_DATA_STORE_NAME)
@@ -44,7 +41,7 @@ Create the two methods for save and print and for our example we are using only 
 object PreferencesDataStoreHelper {
 
     //Other Code Here...
-    
+
     internal suspend fun saveStringValue(
         value: String,
         key: Preferences.Key<String>,
@@ -65,7 +62,7 @@ object PreferencesDataStoreHelper {
             }.map { readData ->
                 readData[key]
             }
-    
+
     //Other Code Here...
 }
 ```
@@ -78,7 +75,7 @@ Bonus Part - delete specific value and delete all Data Store values
 object PreferencesDataStoreHelper {
 
     //Other Code Here...
-    
+
     internal suspend fun removeStringValueWithSpecificKey(
         key: Preferences.Key<String>,
         context: Context
@@ -182,8 +179,16 @@ class MainActivity : ComponentActivity() {
 }
 ```
 
-## Check my article
-https://medium.com/@nicosnicolaou/preferences-data-store-setup-b197e3db09dd <br />
+> [!IMPORTANT]  
+> Check my article for the setup :point_right: [Preferences Data Store Setup - Medium](https://medium.com/@nicosnicolaou/preferences-data-store-setup-b197e3db09dd) :point_left: <br />
+
+# Versioning
+
+Target SDK version: 35 <br />
+Minimum SDK version: 28 <br />
+Kotlin version: 2.1.0 <br />
+Gradle version: 8.8.0 <br />
 
 # References
+
 https://developer.android.com/topic/libraries/architecture/datastore <br />
