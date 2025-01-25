@@ -7,6 +7,8 @@ Minimum SDK version: 27 <br />
 Kotlin version: 2.0.20 <br />
 Gradle version: 8.5.2 <br />
 
+# Setup
+
 ## Step 1:
 
 Add the dependencies library
