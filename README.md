@@ -2,11 +2,6 @@
 
 This project demonstrates the setup of the Jetpack Library's Preference Data Store.
 
-Target SDK version: 34 <br />
-Minimum SDK version: 27 <br />
-Kotlin version: 2.0.20 <br />
-Gradle version: 8.5.2 <br />
-
 # Setup
 
 ## Step 1:
@@ -186,6 +181,13 @@ class MainActivity : ComponentActivity() {
 
 > [!IMPORTANT]  
 > Check my article for the setup :point_right: [Preferences Data Store Setup - Medium](https://medium.com/@nicosnicolaou/preferences-data-store-setup-b197e3db09dd) :point_left: <br />
+
+# Versioning
+
+Target SDK version: 34 <br />
+Minimum SDK version: 27 <br />
+Kotlin version: 2.0.20 <br />
+Gradle version: 8.5.2 <br />
 
 # References
 
