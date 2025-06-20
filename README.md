@@ -9,7 +9,7 @@ This project demonstrates the setup of the Jetpack Library's Preference Data Sto
 Add the dependencies library
 
 ```Kotlin
-val preferencesDataStoreVersion by extra("1.0.0")
+val preferencesDataStoreVersion by extra("1.1.7")
 
 dependencies {
     //...
@@ -186,8 +186,8 @@ class MainActivity : ComponentActivity() {
 
 Target SDK version: 35 <br />
 Minimum SDK version: 28 <br />
-Kotlin version: 2.1.20 <br />
-Gradle version: 8.9.1 <br />
+Kotlin version: 2.1.21 <br />
+Gradle version: 8.10.1 <br />
 
 # References
 
