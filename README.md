@@ -8,6 +8,8 @@ This project demonstrates the setup of the Jetpack Library's Preference Data Sto
 
 Add the dependencies library
 
+#### Kotlin
+
 ```Kotlin
 val preferencesDataStoreVersion by extra("1.1.7")
 
@@ -18,7 +20,7 @@ dependencies {
 }
 ```
 
-### libs.versions.toml
+#### libs.versions.toml
 
 ```toml
 [versions]
