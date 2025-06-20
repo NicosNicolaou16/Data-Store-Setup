@@ -18,6 +18,22 @@ dependencies {
 }
 ```
 
+### libs.versions.toml
+
+```toml
+[versions]
+# other versions here...
+dataStore = "1.1.7"
+
+[libraries]
+# other libraries here...
+preference-data-store = { group = "androidx.datastore", name = "datastore-preferences", version.ref = "dataStore" }
+```
+
+```Kotlin
+implementation(libs.preference.data.store)
+```
+
 ## Step 2:
 
 Create a Helper class that initialize the Data Store
