@@ -32,6 +32,8 @@ dataStore = "1.1.7"
 preference-data-store = { group = "androidx.datastore", name = "datastore-preferences", version.ref = "dataStore" }
 ```
 
+#### Application Gradle:
+
 ```Kotlin
 implementation(libs.preference.data.store)
 ```
@@ -198,7 +200,9 @@ class MainActivity : ComponentActivity() {
 ```
 
 > [!IMPORTANT]  
-> Check my article for the setup :point_right: [Preferences Data Store Setup - Medium](https://medium.com/@nicosnicolaou/preferences-data-store-setup-b197e3db09dd) :point_left: <br />
+> Check my article for the setup :
+> point_right: [Preferences Data Store Setup - Medium](https://medium.com/@nicosnicolaou/preferences-data-store-setup-b197e3db09dd) :
+> point_left: <br />
 
 # Versioning
 
