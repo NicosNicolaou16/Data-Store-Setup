@@ -24,7 +24,6 @@ import androidx.compose.ui.unit.dp
 import androidx.datastore.preferences.core.stringPreferencesKey
 import com.nicos.datastoresetup.preferencesDataStore.PreferencesDataStoreHelper
 import com.nicos.datastoresetup.ui.theme.DataStoreSetupTheme
-import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
 private const val PREFERENCE_STRING_KEY = "preference_string_key"

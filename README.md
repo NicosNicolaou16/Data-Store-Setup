@@ -11,7 +11,7 @@ Add the dependencies library
 #### Kotlin
 
 ```Kotlin
-val preferencesDataStoreVersion by extra("1.1.7")
+val preferencesDataStoreVersion by extra("1.2.0")
 
 dependencies {
     //...
@@ -25,7 +25,7 @@ dependencies {
 ```toml
 [versions]
 # other versions here...
-dataStore = "1.1.7"
+dataStore = "1.2.0"
 
 [libraries]
 # other libraries here...
@@ -201,15 +201,14 @@ class MainActivity : ComponentActivity() {
 
 > [!IMPORTANT]  
 > Check my article for the setup :
-> point_right: [Preferences Data Store Setup - Medium](https://medium.com/@nicosnicolaou/preferences-data-store-setup-b197e3db09dd) :
-> point_left: <br />
+> point_right: [Preferences Data Store Setup - Medium](https://medium.com/@nicosnicolaou/preferences-data-store-setup-b197e3db09dd) :point_left: <br />
 
 # Versioning
 
 Target SDK version: 36 <br />
 Minimum SDK version: 29 <br />
-Kotlin version: 2.2.10 <br />
-Gradle version: 8.12.1 <br />
+Kotlin version: 2.3.0 <br />
+Gradle version: 8.13.2 <br />
 
 # References
 
