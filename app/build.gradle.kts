@@ -57,6 +57,7 @@ android {
 
 dependencies {
 
+    // Preference Data Store
     implementation(libs.preference.data.store)
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
