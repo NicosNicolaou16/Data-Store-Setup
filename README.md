@@ -205,6 +205,7 @@ class MainActivity : ComponentActivity() {
 
 # Versioning
 
+Data Store Version: 1.2.0 <br />
 Target SDK version: 36 <br />
 Minimum SDK version: 29 <br />
 Kotlin version: 2.3.10 <br />
