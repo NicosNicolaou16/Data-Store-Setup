@@ -225,4 +225,4 @@ class MainActivity : ComponentActivity() {
 
 ## 📚 References & Resources
 
-- **Official Documentation:** [Android Jetpack DataStore](https://developer.android.com/topic/libraries/architecture/datastore)
+- [Android Jetpack DataStore](https://developer.android.com/topic/libraries/architecture/datastore)
