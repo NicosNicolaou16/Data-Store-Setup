@@ -1,8 +1,24 @@
 # Data Store Setup
 
-This project demonstrates the setup of the Jetpack Library's Preference Data Store.
+[![Linktree](https://img.shields.io/badge/linktree-1de9b6?style=for-the-badge&logo=linktree&logoColor=white)](https://linktr.ee/nicos_nicolaou)
+[![Site](https://img.shields.io/badge/Site-blue?style=for-the-badge&label=Web)](https://nicosnicolaou16.github.io/)
+[![X](https://img.shields.io/badge/X-%23000000.svg?style=for-the-badge&logo=X&logoColor=white)](https://twitter.com/nicolaou_nicos)
+[![LinkedIn](https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/nicos-nicolaou-a16720aa)
+[![Medium](https://img.shields.io/badge/Medium-12100E?style=for-the-badge&logo=medium&logoColor=white)](https://medium.com/@nicosnicolaou)
+[![Mastodon](https://img.shields.io/badge/-MASTODON-%232B90D9?style=for-the-badge&logo=mastodon&logoColor=white)](https://androiddev.social/@nicolaou_nicos)
+[![Bluesky](https://img.shields.io/badge/Bluesky-0285FF?style=for-the-badge&logo=Bluesky&logoColor=white)](https://bsky.app/profile/nicolaounicos.bsky.social)
+[![Dev.to blog](https://img.shields.io/badge/dev.to-0A0A0A?style=for-the-badge&logo=dev.to&logoColor=white)](https://dev.to/nicosnicolaou16)
+[![YouTube](https://img.shields.io/badge/YouTube-%23FF0000.svg?style=for-the-badge&logo=YouTube&logoColor=white)](https://www.youtube.com/@nicosnicolaou16)
+[![Google Developer Profile](https://img.shields.io/badge/Developer_Profile-blue?style=for-the-badge&label=Google)](https://g.dev/nicolaou_nicos)
 
-# Setup
+A comprehensive guide and implementation example for setting up **Jetpack Preference DataStore** in Android. This project demonstrates how to handle persistent data using a modern, type-safe, and asynchronous approach.
+
+> [!IMPORTANT]  
+> Check out the full deep-dive article for this setup:  
+> 👉 **[Preferences Data Store Setup - Medium](https://medium.com/@nicosnicolaou/preferences-data-store-setup-b197e3db09dd)** 👈
+
+
+## 🛠️ Implementation Guide
 
 ## Step 1:
 
@@ -199,18 +215,14 @@ class MainActivity : ComponentActivity() {
 }
 ```
 
-> [!IMPORTANT]  
-> Check my article for the setup :
-> point_right: [Preferences Data Store Setup - Medium](https://medium.com/@nicosnicolaou/preferences-data-store-setup-b197e3db09dd) :point_left: <br />
+## 🔧 Versioning
 
-# Versioning
+- **Data Store Version:** **1.2.0**
+- **Target SDK:** **36**
+- **Minimum SDK:** **29**
+- **Kotlin Version:** **2.3.10**
+- **Gradle Version:** **9.0.1**
 
-Data Store Version: 1.2.0 <br />
-Target SDK version: 36 <br />
-Minimum SDK version: 29 <br />
-Kotlin version: 2.3.10 <br />
-Gradle version: 9.0.1 <br />
+## 📚 References & Resources
 
-# References
-
-https://developer.android.com/topic/libraries/architecture/datastore <br />
+- **Official Documentation:** [Android Jetpack DataStore](https://developer.android.com/topic/libraries/architecture/datastore)
