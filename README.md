@@ -1,10 +1,26 @@
 # Data Store Setup
 
-This project demonstrates the setup of the Jetpack Library's Preference Data Store.
+[![Linktree](https://img.shields.io/badge/linktree-1de9b6?style=for-the-badge&logo=linktree&logoColor=white)](https://linktr.ee/nicos_nicolaou)
+[![Site](https://img.shields.io/badge/Site-blue?style=for-the-badge&label=Web)](https://nicosnicolaou16.github.io/)
+[![X](https://img.shields.io/badge/X-%23000000.svg?style=for-the-badge&logo=X&logoColor=white)](https://twitter.com/nicolaou_nicos)
+[![LinkedIn](https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/nicos-nicolaou-a16720aa)
+[![Medium](https://img.shields.io/badge/Medium-12100E?style=for-the-badge&logo=medium&logoColor=white)](https://medium.com/@nicosnicolaou)
+[![Mastodon](https://img.shields.io/badge/-MASTODON-%232B90D9?style=for-the-badge&logo=mastodon&logoColor=white)](https://androiddev.social/@nicolaou_nicos)
+[![Bluesky](https://img.shields.io/badge/Bluesky-0285FF?style=for-the-badge&logo=Bluesky&logoColor=white)](https://bsky.app/profile/nicolaounicos.bsky.social)
+[![Dev.to blog](https://img.shields.io/badge/dev.to-0A0A0A?style=for-the-badge&logo=dev.to&logoColor=white)](https://dev.to/nicosnicolaou16)
+[![YouTube](https://img.shields.io/badge/YouTube-%23FF0000.svg?style=for-the-badge&logo=YouTube&logoColor=white)](https://www.youtube.com/@nicosnicolaou16)
+[![Google Developer Profile](https://img.shields.io/badge/Developer_Profile-blue?style=for-the-badge&label=Google)](https://g.dev/nicolaou_nicos)
 
-# Setup
+A comprehensive guide and implementation example for setting up **Jetpack Preference DataStore** in Android. This project demonstrates how to handle persistent data using a modern, type-safe, and asynchronous approach.
 
-## Step 1:
+> [!IMPORTANT]  
+> Check out the full deep-dive article for this setup:  
+> 👉 **[Preferences Data Store Setup - Medium](https://medium.com/@nicosnicolaou/preferences-data-store-setup-b197e3db09dd)** 👈
+
+
+## 🛠️ Implementation Guide
+
+### Step 1:
 
 Add the dependencies library
 
@@ -38,7 +54,7 @@ preference-data-store = { group = "androidx.datastore", name = "datastore-prefer
 implementation(libs.preference.data.store)
 ```
 
-## Step 2:
+### Step 2:
 
 Create a Helper class that initialize the Data Store
 
@@ -53,7 +69,7 @@ object PreferencesDataStoreHelper {
 }
 ```
 
-## Step 3:
+### Step 3:
 
 Create the two methods for save and print and for our example we are using only for String value
 
@@ -87,7 +103,7 @@ object PreferencesDataStoreHelper {
 }
 ```
 
-## Step 4:
+### Step 4:
 
 Bonus Part - delete specific value and delete all Data Store values
 
@@ -109,7 +125,7 @@ object PreferencesDataStoreHelper {
 }
 ```
 
-## Step 5:
+### Step 5:
 
 Call the methods for save, print, delete specific value and all values in the screen
 
@@ -199,17 +215,24 @@ class MainActivity : ComponentActivity() {
 }
 ```
 
-> [!IMPORTANT]  
-> Check my article for the setup :
-> point_right: [Preferences Data Store Setup - Medium](https://medium.com/@nicosnicolaou/preferences-data-store-setup-b197e3db09dd) :point_left: <br />
+## 🔧 Versioning
 
-# Versioning
+- **Data Store Version:** **1.2.0**
+- **Target SDK:** **36**
+- **Minimum SDK:** **29**
+- **Kotlin Version:** **2.3.10**
+- **Gradle Version:** **9.0.1**
 
-Target SDK version: 36 <br />
-Minimum SDK version: 29 <br />
-Kotlin version: 2.3.0 <br />
-Gradle version: 8.13.2 <br />
+## 📚 References & Resources
 
-# References
+- [Android Jetpack DataStore](https://developer.android.com/topic/libraries/architecture/datastore)
 
-https://developer.android.com/topic/libraries/architecture/datastore <br />
+## ⭐ Stargazers
+
+If you enjoy this project, please give it a star!
+Check out all the stargazers
+here: [Stargazers on GitHub](https://github.com/NicosNicolaou16/Data-Store-Setup/stargazers)
+
+## 🙏 Support & Contributions
+
+This project is actively maintained. Feedback, bug reports, and feature requests are welcome! Please feel free to **open an issue** or submit a **pull request**.
