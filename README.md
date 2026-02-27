@@ -20,7 +20,7 @@ A comprehensive guide and implementation example for setting up **Jetpack Prefer
 
 ## 🛠️ Implementation Guide
 
-## Step 1:
+### Step 1:
 
 Add the dependencies library
 
@@ -54,7 +54,7 @@ preference-data-store = { group = "androidx.datastore", name = "datastore-prefer
 implementation(libs.preference.data.store)
 ```
 
-## Step 2:
+### Step 2:
 
 Create a Helper class that initialize the Data Store
 
@@ -69,7 +69,7 @@ object PreferencesDataStoreHelper {
 }
 ```
 
-## Step 3:
+### Step 3:
 
 Create the two methods for save and print and for our example we are using only for String value
 
@@ -103,7 +103,7 @@ object PreferencesDataStoreHelper {
 }
 ```
 
-## Step 4:
+### Step 4:
 
 Bonus Part - delete specific value and delete all Data Store values
 
@@ -125,7 +125,7 @@ object PreferencesDataStoreHelper {
 }
 ```
 
-## Step 5:
+### Step 5:
 
 Call the methods for save, print, delete specific value and all values in the screen
 
