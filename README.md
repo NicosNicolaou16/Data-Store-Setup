@@ -226,3 +226,13 @@ class MainActivity : ComponentActivity() {
 ## 📚 References & Resources
 
 - [Android Jetpack DataStore](https://developer.android.com/topic/libraries/architecture/datastore)
+
+## ⭐ Stargazers
+
+If you enjoy this project, please give it a star!
+Check out all the stargazers
+here: [Stargazers on GitHub](https://github.com/NicosNicolaou16/Data-Store-Setup/stargazers)
+
+## 🙏 Support & Contributions
+
+This library is actively maintained. Feedback, bug reports, and feature requests are welcome! Please feel free to **open an issue** or submit a **pull request**.
