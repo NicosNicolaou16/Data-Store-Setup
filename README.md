@@ -220,8 +220,8 @@ class MainActivity : ComponentActivity() {
 - **Data Store Version:** **1.2.1**
 - **Target SDK:** **36**
 - **Minimum SDK:** **29**
-- **Kotlin Version:** **2.3.10**
-- **Gradle Version:** **9.0.1**
+- **Kotlin Version:** **2.3.21**
+- **Gradle Version:** **9.2.1**
 
 ## 📚 References & Resources
 
