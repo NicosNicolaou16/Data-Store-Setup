@@ -7,13 +7,13 @@ plugins {
 
 android {
     namespace = "com.nicos.datastoresetup"
-    buildToolsVersion = "36.0.0"
-    compileSdk = 36
+    buildToolsVersion = "37.0.0"
+    compileSdk = 37
 
     defaultConfig {
         applicationId = "com.nicos.datastoresetup"
         minSdk = 29
-        targetSdk = 36
+        targetSdk = 37
         versionCode = 1
         versionName = "1.0"
 
