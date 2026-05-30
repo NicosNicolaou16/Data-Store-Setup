@@ -17,6 +17,9 @@ A comprehensive guide and implementation example for setting up **Jetpack Prefer
 > Check out the full deep-dive article for this setup:  
 > 👉 **[Preferences Data Store Setup - Medium](https://medium.com/@nicosnicolaou/preferences-data-store-setup-b197e3db09dd)** 👈
 
+> [!IMPORTANT]  
+> Check out the implementation of the encrypted version of Data Store:  
+> 👉 **[Preferences Data Store Encryption - GitHub](https://github.com/NicosNicolaou16/Preferences-Data-Store-Encryption)** 👈
 
 ## 🛠️ Implementation Guide
 
